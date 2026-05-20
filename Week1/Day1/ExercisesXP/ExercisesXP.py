@@ -74,9 +74,9 @@ if a > b :
 
 nb = float(input("Type a number : "))
 if (nb % 2 == 0) :
-      print('This number is odd ')
-else :
       print('This number is even ')
+else :
+      print('This number is odd ')
 
 # # Exercise 8: What’s your name?
 # # Instructions

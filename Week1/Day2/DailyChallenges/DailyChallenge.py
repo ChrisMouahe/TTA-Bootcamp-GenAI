@@ -33,17 +33,18 @@
 # # For the input “grapes”, the output should be: {"g": [0], "r": [1], "a": [2], "p": [3], "e": [4], "s": [5]}.
 
 
-word_dict = {}
+
 def letter_index_dict(*arg) :
       word = input('Type a word please : ')
+      word_dict = {}
       for index, char in enumerate(word) :
             if char in word_dict :
                   word_dict[char].append(index)
             else :
                   word_dict[char] = [index]
 
-      print(word_dict)
-letter_index_dict()
+      return word_dict
+print(letter_index_dict())
 
 # # Challenge 2: Affordable Items
 # # Goal: Create a program that prints a list of items that can be purchased with a given amount of money.
@@ -61,14 +62,15 @@ letter_index_dict()
 # # Instructions:
 # # 1. Store Data:
 
-# # You will be provided with a dictionary () where the keys are the item names and the values are their prices (as strings with a dollar sign). The priority is defined by the position of the iten on the dictionary: from the most important to the less important.items_purchase
+# # You will be provided with a dictionary (items_purchase) where the keys are the item names and the values are their prices (as strings with a dollar sign). 
+# # The priority is defined by the position of the iten on the dictionary: from the most important to the less important.
 # # You will also be given a string () representing the amount of money you have.wallet
 # # 2. Data Cleaning:
 
 # # You need to clean the dollar sign and the commas using python. Don’t hard code it.
 # # 3. Determining Affordable Items:
 
-# # create a list called and add there the items that you can buy with the money you have on the walletbasket
+# # create a list called  wallet and add there the items that you can buy with the money you have on thebasket
 # # Don’t forget to update the wallet after buying an item.
 # # If the is empty (no items can be afforded), return the string “Nothing”.basket
 # # Otherwise, print the list in alphabetical order.basket
@@ -94,19 +96,24 @@ letter_index_dict()
 
 def affordable_items(items_purchase, wallet):
 
-      # Nettoyage du portefeuille
+      # cleaning of the wallet
       wallet_amount = int(wallet.replace("$", "").replace(",", ""))
       basket = []
       for item, price in items_purchase.items():
-            # Nettoyage du prix
+            # cleaning of $ in the price
             clean_price = int(price.replace("$", "").replace(",", ""))
 
-      # Vérifie si l'article est abordable
-      if clean_price <= wallet_amount:
-            basket.append(item)
-            wallet_amount -= clean_price
+      # check if item is affordable
+            if clean_price <= wallet_amount:
+                  basket.append(item)
+                  wallet_amount -= clean_price
 
       if not basket:
             print("Nothing")
       else:
             print(sorted(basket))
+
+# Exemple of testing code
+items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
+wallet = "$80"
+affordable_items(items_purchase, wallet)

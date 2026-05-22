@@ -1,23 +1,34 @@
+# # Instructions: Old MacDonald’s Farm
+
+# # You are given example code and output. Your task is to create a class that produces the same output. Farm
+
+# # Step 1: Create the Farm Class
+
+# # Create a class called .Farm
+# # This class will represent a farm and its animals.
+
+
+# # Step 2: Implement the __init__ Method
+
+# # Step 3: Implement the add_animal Method
+
+# # Step 4: Implement the get_info Method
+
+
+# # Step 5: Test Your Code
+
+
 # # Bonus: Expand The Farm
 
 # # Step 6: Implement the get_animal_types Method
 
-# # Add a method called get_animal_types to the class Farm.
-# # This method should return a sorted list of all animal types (animals keys from the dictionary). 
-# # Use the function to sort the list.sorted()
+# # Bonus: Expand The Farm
+
+# # Step 6: Implement the get_animal_types Method
 
 # # Step 7: Implement the get_short_info Method
 
-# # Add a method called class get_short_info to the Farm.
-# # This method should return a string like “McDonald’s farm has cows, goats and sheeps.”.
-# # Call the method get_animal_types to get the list of animals.
-# # Construct the string, adding an “s” to the animal name if its count is greater than 1.
-# # Use string formatting to create the output.
-
 # # Step 8: upgrade the add_animal Method
-
-# # use for **kwargs passing multiple animals. The keys will be the animal name and the value will be the quantity.
-# # Then you can call the method this way: macdonald.add_animal('cow'= 5, 'sheep' = 2, 'goat' = 12)
 
 
 
@@ -41,7 +52,7 @@ class Farm() :
             for animal_type, count in self.animals.items() :
                   info += f"{animal_type:<8} : {count} \n"
 
-            info += f"\nE-I-E-I-0"
+            info += f"\nE-I-E-I-0!"
             return info
 # creation of a magic method for print clearly the value of Farm
       def __str__(self) :

@@ -67,10 +67,11 @@ class Dog:
             return f"{self.name} is barking "
 
       def run_speed(self):
-            x = self.weight / self.age * 10
-            return f"{x}"
             if self.age == 0 :
                   return 0
+            else :
+                  return f"{self.weight / self.age * 10}"
+            
 
       def fight(self, other_dog):
             dog_power = self.run_speed() * self.weight
@@ -107,7 +108,7 @@ print(dog1.fight(dog2))
 
 class Person() : 
       def __init__(self, first_name, age) :
-            self.first_name = ""
+            self.first_name = first_name
             self.age = age
             self.last_name = ""
 

@@ -28,10 +28,10 @@ class PetDog(Dog):
             self.trained = True
 
       def play(self, *args):
-            dogs = [self.name]
+            dogs = [self.name] 
             for dog in args :
                   dogs.append(dog)
-                  print (f'{", ".join(dogs)} all play together')
+            print (f'{", ".join(dogs)} all play together')
 
       def do_a_trick(self): 
         if self.trained:

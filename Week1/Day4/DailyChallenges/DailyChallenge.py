@@ -91,6 +91,8 @@ print(p.current_idx + 1)
 
 p.go_to_page(0)
 
+print(p.next_page().next_page().next_page().get_visible_items())
+
 
 
 

@@ -1,3 +1,4 @@
+# Exercice Daily Challenge
 # # Instructions: Pagination System
 
 # # Goal:
@@ -24,6 +25,7 @@
 # # Step 6: Test Your Code
 
 import math
+
 class Pagination :
       def __init__(self, items=None, page_size = 10) :
             self.items = items if items is not None else []
@@ -72,10 +74,23 @@ class Pagination :
 
       
 
-alphabetListe = list('abcdefghijklmnopqrstuvwxyz')
-p = Pagination(alphabetListe, 4)    
+alphabetList = list('abcdefghijklmnopqrstuvwxyz')
+p = Pagination(alphabetList, 4)    
+p = Pagination(alphabetList, 4)
 
-print(p.next_page().next_page().next_page().get_visible_items())
+print(p.get_visible_items())
+
+p.next_page()
+print(p.get_visible_items())
+
+p.last_page()
+print(p.get_visible_items())
+
+p.go_to_page(10)
+print(p.current_idx + 1)
+
+p.go_to_page(0)
+
 
 
 

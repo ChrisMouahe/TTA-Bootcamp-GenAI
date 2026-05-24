@@ -1,8 +1,19 @@
 
 import random
 class Game :
+      """
+    Represents a Rock-Paper-Scissors game.
+    """
       def get_user_item(self):
-            
+            """
+        Ask the user to choose rock, paper, or scissors.
+
+        The function keeps asking until
+        the user enters a valid choice.
+
+        Returns:
+            str: The user's choice ('r', 'p', or 's').
+        """
             self.user_item = ""
             while self.user_item.lower() != "r" and self.user_item.lower() != "p" and self.user_item.lower() != "s" :
                   self.user_item = input(' Select (r)ock, (p)aper or (s)cissors : ')
@@ -10,6 +21,13 @@ class Game :
             return self.user_item.lower()
 
       def get_computer_item(self):
+            """
+        Randomly select rock, paper, or scissors
+        for the computer.
+
+        Returns:
+            str: The computer's choice.
+        """
             choices = ["r", "p", "s"]
             self.computer_item = random.choice(choices)
             return self.computer_item
@@ -49,6 +67,19 @@ class Game :
             return self.result
 
       def play(self):
+            """
+        Play one complete game.
+
+        This method:
+        - gets the user's choice,
+        - gets the computer's choice,
+        - determines the game result,
+        - displays the final message.
+
+        Returns:
+            str: The game result.
+        """
+
 
             sentences = [
                   "you'll sure win the next time.",

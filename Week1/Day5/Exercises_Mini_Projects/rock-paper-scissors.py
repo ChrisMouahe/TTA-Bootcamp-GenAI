@@ -11,6 +11,19 @@ results = {
             "Draw": 0
             }
 def get_user_menu_choice():
+      """
+    Display the main menu
+    and return the user's choice.
+
+    Menu options:
+    1 - Play a new game
+    2 - Show scores
+    3 - Quit the program
+
+    Returns:
+        int: The selected menu option.
+    """
+
       make_choices = [
             '(1): Play a new game', 
             '(2): Show scores', 
@@ -22,7 +35,17 @@ def get_user_menu_choice():
       return choice
 
 def print_results(results):
-      
+      """
+    Display the current game scores.
+
+    Args:
+        results (dict): Dictionary containing
+        the number of wins, losses, and draws.
+
+    Returns:
+        dict: Updated results dictionary.
+    """
+
       if result == "Won" :
             results['Won'] += 1
       elif result == "Loss" : 
@@ -33,6 +56,15 @@ def print_results(results):
       return results
 
 def main() :
+      """
+    Run the main game loop.
+
+    The player can:
+    - start a new game,
+    - display scores,
+    - quit the program.
+    """
+    
       while True :
             menu_choice = get_user_menu_choice()
 

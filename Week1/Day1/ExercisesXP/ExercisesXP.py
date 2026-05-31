@@ -83,7 +83,7 @@ else :
 # # Write code that asks the user for their name and determines whether or not you have the same height. 
 # # Print out a funny message based on the outcome.
 
-nama = (input('Type your name : '))
+name = (input('Type your name : '))
 if name.lower() == "chrisostome" :
       print('Congratulations !! You are ME ')
 else :

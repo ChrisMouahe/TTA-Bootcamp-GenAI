@@ -9,7 +9,7 @@
 # # Step 4: Take Cats for a Walk
 
 
-class Pets():
+class Pets(): 
       def __init__(self, animals):
             self.animals = animals
 

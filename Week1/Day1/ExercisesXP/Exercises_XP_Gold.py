@@ -34,4 +34,9 @@ liste = []
 for i in range(20) :
       liste.append(i + 1)
 print(liste)
-for j in
+j = 1
+indice = 0
+for numb in liste :
+      indice = get_index(liste, liste[j])
+      if indice % 2 == 0 :
+            print(numb)

@@ -65,21 +65,29 @@ class Farm() :
 
 # Implement the get_short_info Method
       def get_short_info(self) :
-            infos = f"{self.Farm_name}'s farm has "
+            animal_type = self.get_animal_types()
+            # Add 's' to each animal type for plurality (a simplification) 
+            plural_animals = [animal + 's' for animal in animal_type]
 
-            # verifying which animal_type takes s or not
-            for animal_type, count in self.animals.items() :
-                  if count == 1 :
-                        infos += f"{animal_type} "
-                  elif count > 1 :
-                        infos += f"{animal_type}s "
+             if len(plural_animals) == 0:
+                  return f"{self.Farm_name}'s farm has no animals."
+            if len(plural_animals) == 1:
+                return f"{self.Farm_name}'s farm has {plural_animals[0]}."
 
-            infos +="."
+            # Join all but the last with a comma, then add the last one with 'and'
+            all_but_last = ', '.join(plural_animals[:-1])
+            last_animal = plural_animals[-1]
+            animal_string = f"{all_but_last} and {last_animal}"
 
-            return infos
+            return f"{self.Farm_name}'s farm has {animal_string}."
+
 
 # upgrade the add_animal Method
       def add_animal(self, **kwargs):
+            if animal_type in kwargs.items() :
+                  self.animals[animal_type] += count
+            else :
+                  self.animals[animal_type] = count
             print(kwargs.items())
             
 

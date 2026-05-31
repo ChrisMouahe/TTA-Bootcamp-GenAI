@@ -58,13 +58,13 @@ for key, value in family.items():
       if value < 3 :
             print ('The ticket of ', key, ' is free.')
             price.append(0)
-      elif value >= 3 and value < 12 :
+      elif value >= 3 and value <= 12 :
             print ('The ticket price of ',key, ' is 10$.' )
             price.append(10)
       else :
             print ('The ticket price of ',key, ' is 15$')
             price.append(15)
-      total = sum(price)
+total = sum(price)
 print(price, '\nThe total ticket cost is ',total,'$.')
 
 
@@ -175,8 +175,8 @@ more_on_zara = {
       'creation_date': 1975,
       'number_stores': 7000,
 }
-fusion = brand | more_on_zara 
-print('la fusion est : ',fusion)
+merged = brand | more_on_zara 
+print('the merge is : ',merged)
 
 
 # # Exercise 4 : Some Geography

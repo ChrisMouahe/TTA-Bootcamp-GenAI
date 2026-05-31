@@ -162,57 +162,57 @@ stairway.sing_me_a_song()
 # # you can pass multiple animals names separated by a comma.add_animal()*args
 
 
-   class Zoo:
-    def __init__(self, zoo_name):
-        self.zoo_name = zoo_name
-        self.animals = []
-        self.groups = {}
+class Zoo:
+      def __init__(self, zoo_name):
+            self.zoo_name = zoo_name
+            self.animals = []
+            self.groups = {}
 
     # Add one or multiple animals
-    def add_animal(self, *args):
-        for new_animal in args:
-            if new_animal not in self.animals:
-                self.animals.append(new_animal)
+      def add_animal(self, *args):
+            for new_animal in args:
+                  if new_animal not in self.animals:
+                        self.animals.append(new_animal)
 
     # Display all animals
-    def get_animals(self):
-        print(f"\nAnimals in {self.zoo_name}:\n")
+      def get_animals(self):
+            print(f"\nAnimals in {self.zoo_name}:\n")
 
-        for animal in self.animals:
-            print(animal)
+            for animal in self.animals:
+                  print(animal)
 
     # Remove an animal from the zoo
-    def sell_animal(self, animal_sold):
-        if animal_sold in self.animals:
-            self.animals.remove(animal_sold)
-            print(f"\n{animal_sold} has been sold.")
-        else:
-            print(f"\n{animal_sold} is not in the zoo.")
+      def sell_animal(self, animal_sold):
+            if animal_sold in self.animals:
+                  self.animals.remove(animal_sold)
+                  print(f"\n{animal_sold} has been sold.")
+            else:
+                  print(f"\n{animal_sold} is not in the zoo.")
 
     # Sort and group animals alphabetically
-    def sort_animals(self):
-        self.animals.sort()
+      def sort_animals(self):
+            self.animals.sort()
 
-        grouped = {}
+            grouped = {}
 
-        for animal in self.animals:
-            first_letter = animal[0]
+            for animal in self.animals:
+                  first_letter = animal[0]
 
-            if first_letter not in grouped:
-                grouped[first_letter] = []
+                  if first_letter not in grouped:
+                        grouped[first_letter] = []
 
-            grouped[first_letter].append(animal)
+                        grouped[first_letter].append(animal)
 
-        self.groups = grouped
+            self.groups = grouped
 
-        return grouped
+            return grouped
 
     # Display grouped animals
-    def get_groups(self):
-        print("\nGrouped Animals:\n")
+      def get_groups(self):
+            print("\nGrouped Animals:\n")
 
-        for letter, animals in self.groups.items():
-            print(f"{letter}: {animals}")
+            for letter, animals in self.groups.items():
+                  print(f"{letter}: {animals}")
 
 
 # Create a zoo instance
